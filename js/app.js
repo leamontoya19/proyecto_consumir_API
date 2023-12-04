@@ -1,48 +1,91 @@
 function loadUser(){
-    const apiUrl='https://randomuser.me/api/'; //API url
+    const apiUrl='https://randomuser.me/api/'; 
     fetch(apiUrl)
     .then(res=>res.json()) 
     .then(resJson=>{       
-        console.log(resJson)
 
-        const user=resJson.results[0]; //comienza con 0 porque es un Array de un solo elemento.
+        const user=resJson.results[0]; 
         
         const nameUser=user.name;
         const imageUser=user.picture.large;
         const ageUser=user.dob;
-        showUser(nameUser, imageUser,ageUser);
+        const genderUser=user.gender;
+        showUser(nameUser, imageUser,genderUser,ageUser);
+    
        
     })
-    .catch(error=>error) //se usa catch para que el programa no se rompa por algun error externo.
-           
+    .catch(error=>error);
+    
+
 }
 loadUser()
 
-function showUser(nameUser, imageUser,ageUser){
-    const app=document.getElementById("app");//la constante app!
+function showUser(nameUser, imageUser,genderUser,ageUser){
+    const app=document.getElementById("app");
 
-    //al elemento app se le inserta la informcion del usuario:
+
     app.innerHTML=`
     <h3 class="userName">${nameUser.first} ${nameUser.last}</h3>
     <div>
         <img src=${imageUser}   alt="User Photo"/>
+        <p> ${genderUser} </p>
         <p class="age"> ${ageUser.age} ${" years old"} </p>
     </div>
     `;
 }
 
 //Relacionando el botón para iterar el array.
-//luego, relacionando el btn deñ HTML aquí en JS.
 const btnNext = document.getElementById("next-user");
 //asocio la funcion al evento onclick con del botón
-btnNext.addEventListener("click", loadUser)
+btnNext.addEventListener("click", loadUser);
 
-//btn de like
-function toggleHeart(){
-    const heart = document.getElementById("heart");
-    if (heart.class.includes("bi bi-heart")){
-        
-
-    }
-
+//-------Filtrado por género-----
+function filterFemaleUsers() {
+    const filteredApiUrl = 'https://randomuser.me/api/?gender=female';
+    fetch(filteredApiUrl)
+        .then(res => res.json())
+        .then(resJson => {
+            const femaleUsers = resJson.results;
+            femaleUsers.forEach(user => {
+                const nameUser = user.name;
+                const imageUser = user.picture.large;
+                const ageUser = user.dob;
+                const genderUser = user.gender;
+                showUser(nameUser, imageUser, genderUser, ageUser);
+            });
+        })
+        .catch(error => error);
 }
+
+const btnFem = document.getElementById("gender-fem");
+btnFem.addEventListener("click", filterFemaleUsers);
+
+function filterMaleUsers() {
+    const filteredApiUrlMale = 'https://randomuser.me/api/?gender=male';
+    fetch(filteredApiUrlMale)
+        .then(res => res.json())
+        .then(resJson => {
+            const maleUsers = resJson.results;
+            maleUsers.forEach(user => {
+                const nameUser = user.name;
+                const imageUser = user.picture.large;
+                const ageUser = user.dob;
+                const genderUser = user.gender;
+                showUser(nameUser, imageUser, genderUser, ageUser);
+            });
+        })
+        .catch(error => error);
+}
+
+const btnMale = document.getElementById("gender-male");
+btnMale.addEventListener("click", filterMaleUsers);
+
+
+
+
+
+
+
+
+
+

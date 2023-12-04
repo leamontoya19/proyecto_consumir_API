@@ -5,9 +5,10 @@ body{
     text-align: center;
 }
 .title{
-    font-size: 50px;
+    font-size: 100px;
     margin-top: 80px;
-
+    font-family: 'Dancing Script', cursive;
+    margin-top: 20px;
 }
 #app{
     background-color: white;
@@ -37,7 +38,7 @@ body{
     position: absolute;
     background: none;
     border: none;
-    font-size: 4rem;
+    font-size: 3.5rem;
     top: 67%;
     margin-left: -133px;
     color: rgb(207, 29, 29);
@@ -48,12 +49,14 @@ body{
     font-style: italic;
     letter-spacing: 2px;
     word-spacing: 3px;
-    text-shadow:2px 1px palevioletred;
+    text-shadow:2px 1px palevioletred;   
+}
+label{
+    font-size: 25px;
     
 }
-.age{
-    color: #000;;
-    font-size:20px;
-    font-style: italic;
-
+.gender{
+    font-size: 18px;
+    background-color:palevioletred ;
+    margin-top: 15px;
 }
