@@ -1,11 +1,10 @@
-#hearted :tw-1f498:
-<p>
-Hearted es una similacion de una aplicaciòn web de citas
-</p>
+hearted twemoji-1f498
 
-##Objetivo del proyecto:
-<p>
-En este proyecto se está consumiendo una API pública en Javascript haciendo uso de la función fetch y por el método ".then"
-</p>
-##La API utilizada en este proyecto:
-[Radom User](http://https://randomuser.me/ "Radom User")
+Hearted es una similación de una aplicación web de citas.
+
+Objetivo del proyecto:
+
+En este proyecto se está consumiendo una API pública en Javascript haciendo uso de la función fetch y por el método “.then”
+
+La API utilizada en este proyecto:
+Radom User
