@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(207, 29, 29);
+    color:white;
+    font-family:'Franklin Gothic Medium', cursive;
+    text-align: center;
+}
+.title{
+    font-size: 50px;
+    margin-top: 80px;
+
+}
+#app{
+    background-color: white;
+    color:rgb(0, 0, 0);
+    width: 280px;
+    height: 250px;
+    margin:0 auto;
+    border-radius: 10px;
+    
+}
+/*----Botón para pasar al siguiente----*/
+.next-user{
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 64%;
+    margin-left: 78px;
+    color:rgb(207, 29, 29);
+    cursor: pointer;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    background-color:rgba(216, 112, 147, 0.285);
+}
+/*el botón de like*/
+#heart{
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 67%;
+    margin-left: -133px;
+    color: rgb(207, 29, 29);
+
+}
+.userName{
+    font-size: larger;
+    font-style: italic;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-shadow:2px 1px palevioletred;
+    
+}
+.age{
+    color: #000;;
+    font-size:20px;
+    font-style: italic;
+
+}
