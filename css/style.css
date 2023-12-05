@@ -34,15 +34,19 @@ body{
     background-color:rgba(216, 112, 147, 0.285);
 }
 /*el botón de like*/
-#heart{
+.heart{
     position: absolute;
     background: none;
     border: none;
     font-size: 3.5rem;
     top: 67%;
     margin-left: -133px;
-    color: rgb(207, 29, 29);
+    color:rgba(216, 112, 147, 0.482);
+    cursor: pointer;
+}
 
+.heart.red-heart{
+    color:red
 }
 .userName{
     font-size: larger;

@@ -80,6 +80,12 @@ function filterMaleUsers() {
 const btnMale = document.getElementById("gender-male");
 btnMale.addEventListener("click", filterMaleUsers);
 
+//-----botón like------
+function cambiarColor() {
+    const btnHeart = document.getElementById("heart");
+    btnHeart.classList.toggle("red-heart");
+  }
+
 
 
 
